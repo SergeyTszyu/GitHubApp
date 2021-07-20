@@ -30,14 +30,20 @@ private extension AuthorizationViewController {
     
     @IBAction func sigIn() {
         
+        ProgressHUD.show()
+        
         provider = OAuthProvider(providerID: "github.com")
         
         provider!.getCredentialWith(nil) { credential, error in
+            
+            ProgressHUD.dismiss()
+            
             if let credential = credential {
                 Auth.auth().signIn(with: credential) { result, error in
                     if let resultAuth = result, let oauthCredential = resultAuth.credential as? OAuthCredential {
                         let session = Session(token: oauthCredential.accessToken ?? "")
                         NetworkManager.shared.sessionProvider.saveSession(session)
+                        AppNavigator.presentMainScreen()
                     } else if let error = error {
                         Alert.presentAlertView(withType: .error, message: error.localizedDescription)
                     }
@@ -45,4 +51,5 @@ private extension AuthorizationViewController {
             }
         }
     }
+    
 }

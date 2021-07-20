@@ -21,11 +21,11 @@ struct AppNavigator {
     }
     
     static func presentMainScreen(animated: Bool = true) {
-        
+        setRootViewController(R.storyboard.main.instantiateInitialViewController(), animated: animated)
     }
     
     static func presentLoginScreen(animated: Bool = true) {
-        
+        setRootViewController(R.storyboard.authorization.instantiateInitialViewController(), animated: animated)
     }
     
     static func setRootViewController(_ controller: UIViewController?, animated: Bool = true) {
