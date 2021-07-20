@@ -11,6 +11,8 @@ struct AppNavigator {
     
     static func setupRootViewController(for window: UIWindow?) {
         
+        window?.rootViewController = R.storyboard.authorization.instantiateInitialViewController()
+        
         window?.makeKeyAndVisible()
     }
     
