@@ -43,6 +43,9 @@
 		BB01A0F226A76679007345C8 /* RepositoryListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0F026A76679007345C8 /* RepositoryListCell.swift */; };
 		BB01A0F326A76679007345C8 /* RepositoryListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB01A0F126A76679007345C8 /* RepositoryListCell.xib */; };
 		BB01A0F626A76E5F007345C8 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0F526A76E5F007345C8 /* RoundedImageView.swift */; };
+		BB01A0F826A77389007345C8 /* RepositoryNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0F726A77389007345C8 /* RepositoryNetworkManager.swift */; };
+		BB01A0FA26A77418007345C8 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0F926A77418007345C8 /* RepositoryModel.swift */; };
+		BB01A0FC26A778D9007345C8 /* RepositoryOwnerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0FB26A778D9007345C8 /* RepositoryOwnerModel.swift */; };
 		DF34244A2E436E4F4C454109 /* Pods_GitHubApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E694812C2E2171794F816665 /* Pods_GitHubApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +110,9 @@
 		BB01A0F026A76679007345C8 /* RepositoryListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListCell.swift; sourceTree = "<group>"; };
 		BB01A0F126A76679007345C8 /* RepositoryListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryListCell.xib; sourceTree = "<group>"; };
 		BB01A0F526A76E5F007345C8 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		BB01A0F726A77389007345C8 /* RepositoryNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryNetworkManager.swift; sourceTree = "<group>"; };
+		BB01A0F926A77418007345C8 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
+		BB01A0FB26A778D9007345C8 /* RepositoryOwnerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryOwnerModel.swift; sourceTree = "<group>"; };
 		BB06FEE8CB462CF03FD9F6DA /* Pods-GitHubAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubAppTests.debug.xcconfig"; path = "Target Support Files/Pods-GitHubAppTests/Pods-GitHubAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB543075A7F0547A8C6BFACD /* Pods-GitHubApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubApp.debug.xcconfig"; path = "Target Support Files/Pods-GitHubApp/Pods-GitHubApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E694812C2E2171794F816665 /* Pods_GitHubApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -449,6 +455,7 @@
 			isa = PBXGroup;
 			children = (
 				BB01A0B626A64E93007345C8 /* NetworkManager.swift */,
+				BB01A0F726A77389007345C8 /* RepositoryNetworkManager.swift */,
 			);
 			path = NetworkManager;
 			sourceTree = "<group>";
@@ -467,6 +474,8 @@
 		BB01A0B926A7159E007345C8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BB01A0F926A77418007345C8 /* RepositoryModel.swift */,
+				BB01A0FB26A778D9007345C8 /* RepositoryOwnerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -846,9 +855,11 @@
 				BB01A0F226A76679007345C8 /* RepositoryListCell.swift in Sources */,
 				BB01A0E926A75768007345C8 /* UIApplication+TopViewController.swift in Sources */,
 				BB01A0A226A64CC0007345C8 /* UIImageView+ImageLoading.swift in Sources */,
+				BB01A0FC26A778D9007345C8 /* RepositoryOwnerModel.swift in Sources */,
 				BB01A0D126A74309007345C8 /* ErrorHandlerPlugin.swift in Sources */,
 				BB01A0E326A74FD6007345C8 /* MainViewController.swift in Sources */,
 				BB01A0F626A76E5F007345C8 /* RoundedImageView.swift in Sources */,
+				BB01A0F826A77389007345C8 /* RepositoryNetworkManager.swift in Sources */,
 				BB01A0A526A64CED007345C8 /* UIViewController+Extensions.swift in Sources */,
 				BB01A0DC26A74E83007345C8 /* SessionPlainObject.swift in Sources */,
 				BB01A0D626A74E19007345C8 /* Session.swift in Sources */,
@@ -862,6 +873,7 @@
 				BB01A0C926A71C53007345C8 /* AuthorizationViewController.swift in Sources */,
 				BB01A0A726A64D37007345C8 /* AppNavigator.swift in Sources */,
 				BB01A0CD26A74239007345C8 /* RepositoryAPI.swift in Sources */,
+				BB01A0FA26A77418007345C8 /* RepositoryModel.swift in Sources */,
 				BB01A0E626A75732007345C8 /* Alert.swift in Sources */,
 				BB01A0D826A74E22007345C8 /* SessionProvider.swift in Sources */,
 			);

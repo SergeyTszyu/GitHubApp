@@ -162,7 +162,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 5 images.
+  /// This `R.image` struct is generated, and contains static references to 6 images.
   struct image {
     /// Image `icon_cell_badge_fork`.
     static let icon_cell_badge_fork = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_cell_badge_fork")
@@ -172,6 +172,8 @@ struct R: Rswift.Validatable {
     static let icon_cell_badge_star = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_cell_badge_star")
     /// Image `icon_cell_disclosure`.
     static let icon_cell_disclosure = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_cell_disclosure")
+    /// Image `icon_cell_theme`.
+    static let icon_cell_theme = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_cell_theme")
     /// Image `icon_cell_updated`.
     static let icon_cell_updated = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_cell_updated")
 
@@ -200,6 +202,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "icon_cell_disclosure", bundle: ..., traitCollection: ...)`
     static func icon_cell_disclosure(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.icon_cell_disclosure, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_cell_theme", bundle: ..., traitCollection: ...)`
+    static func icon_cell_theme(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_cell_theme, compatibleWith: traitCollection)
     }
     #endif
 
@@ -284,8 +293,8 @@ struct _R: Rswift.Validatable {
       static func validate() throws {
         if UIKit.UIImage(named: "icon_cell_badge_fork", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_cell_badge_fork' is used in nib 'RepositoryListCell', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_cell_badge_issue", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_cell_badge_issue' is used in nib 'RepositoryListCell', but couldn't be loaded.") }
-        if UIKit.UIImage(named: "icon_cell_badge_star", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_cell_badge_star' is used in nib 'RepositoryListCell', but couldn't be loaded.") }
         if UIKit.UIImage(named: "icon_cell_disclosure", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_cell_disclosure' is used in nib 'RepositoryListCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_cell_theme", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_cell_theme' is used in nib 'RepositoryListCell', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
       }

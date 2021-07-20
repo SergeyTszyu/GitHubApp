@@ -10,7 +10,7 @@ import Alamofire
 
 enum RepositoryAPI: APIProtocolable {
     
-    case repositories
+    case repositoriesBy(_ name: String)
 }
 
 extension RepositoryAPI: TargetType {
@@ -21,7 +21,7 @@ extension RepositoryAPI: TargetType {
     
     var path: String {
         switch self {
-        case .repositories:
+        case .repositoriesBy(_):
             return "/search/repositories"
         }
     }
@@ -40,8 +40,9 @@ extension RepositoryAPI: TargetType {
     
     var task: Task {
         switch self {
-        case .repositories:
-            return .requestPlain
+        case .repositoriesBy(let name):
+            return .requestParameters(parameters: ["q": name],
+                                      encoding: URLEncoding.default)
         }
     }
     

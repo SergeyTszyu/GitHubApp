@@ -38,12 +38,28 @@ final class MainViewController: UIViewController {
     
     fileprivate let searchController = UISearchController(searchResultsController: nil)
     
+    fileprivate var repositories = [RepositoryModel]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configure()
+        
+        ProgressHUD.show()
+        RepositoryNetworkManager.shared.repositoriesBy("ios") { result, error in
+            ProgressHUD.dismiss()
+            if let repositories = result {
+                self.repositories = repositories
+            } else if let error = error {
+                Alert.presentAlertView(withType: .error, message: error.localizedDescription)
+            }
+        }
     }
 }
 
@@ -87,11 +103,13 @@ extension MainViewController: UITableViewDelegate {
 extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return repositories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let listCell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.repositoryListCell, for: indexPath)!
+        let repositoryData = repositories[indexPath.row]
+        listCell.fill(repositoryData)
         
         return listCell
     }
