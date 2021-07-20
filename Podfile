@@ -11,6 +11,7 @@ target 'GitHubApp' do
     pod 'SVProgressHUD',         '~> 2.1'   
     pod 'Moya', 		        '~> 12.0.1'
     pod 'Moya-ObjectMapper',     '~> 2.8'
+    pod 'Firebase/Auth'
 
   # Pods for GitHubApp
 

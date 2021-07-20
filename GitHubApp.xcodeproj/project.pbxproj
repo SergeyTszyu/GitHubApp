@@ -24,6 +24,8 @@
 		BB01A0BF26A71639007345C8 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0BE26A71639007345C8 /* R.generated.swift */; };
 		BB01A0C026A71639007345C8 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0BE26A71639007345C8 /* R.generated.swift */; };
 		BB01A0C126A71639007345C8 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0BE26A71639007345C8 /* R.generated.swift */; };
+		BB01A0C726A71C3A007345C8 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB01A0C626A71C3A007345C8 /* Authorization.storyboard */; };
+		BB01A0C926A71C53007345C8 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0C826A71C53007345C8 /* AuthorizationViewController.swift */; };
 		DF34244A2E436E4F4C454109 /* Pods_GitHubApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E694812C2E2171794F816665 /* Pods_GitHubApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,8 @@
 		BB01A0B326A64E35007345C8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BB01A0B626A64E93007345C8 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		BB01A0BE26A71639007345C8 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		BB01A0C626A71C3A007345C8 /* Authorization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
+		BB01A0C826A71C53007345C8 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		BB06FEE8CB462CF03FD9F6DA /* Pods-GitHubAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubAppTests.debug.xcconfig"; path = "Target Support Files/Pods-GitHubAppTests/Pods-GitHubAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB543075A7F0547A8C6BFACD /* Pods-GitHubApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubApp.debug.xcconfig"; path = "Target Support Files/Pods-GitHubApp/Pods-GitHubApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E694812C2E2171794F816665 /* Pods_GitHubApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -367,6 +371,7 @@
 		BB01A0AE26A64DFF007345C8 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				BB01A0C626A71C3A007345C8 /* Authorization.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -374,6 +379,7 @@
 		BB01A0AF26A64E05007345C8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BB01A0C826A71C53007345C8 /* AuthorizationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -441,11 +447,11 @@
 			buildConfigurationList = BB01A08426A4E714007345C8 /* Build configuration list for PBXNativeTarget "GitHubApp" */;
 			buildPhases = (
 				F13FE9DC17A2E2230A789273 /* [CP] Check Pods Manifest.lock */,
+				BB01A0BD26A715F4007345C8 /* R.swift */,
 				BB01A05626A4E70E007345C8 /* Sources */,
 				BB01A05726A4E70E007345C8 /* Frameworks */,
 				BB01A05826A4E70E007345C8 /* Resources */,
 				C0F6AA5776A71F0244ACF9C0 /* [CP] Embed Pods Frameworks */,
-				BB01A0BD26A715F4007345C8 /* R.swift */,
 			);
 			buildRules = (
 			);
@@ -542,6 +548,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB01A0C726A71C3A007345C8 /* Authorization.storyboard in Resources */,
 				BB01A06A26A4E714007345C8 /* LaunchScreen.storyboard in Resources */,
 				BB01A06726A4E714007345C8 /* Assets.xcassets in Resources */,
 			);
@@ -699,6 +706,7 @@
 				BB01A0B426A64E35007345C8 /* BaseViewController.swift in Sources */,
 				BB01A0BF26A71639007345C8 /* R.generated.swift in Sources */,
 				BB01A05E26A4E70F007345C8 /* AppDelegate.swift in Sources */,
+				BB01A0C926A71C53007345C8 /* AuthorizationViewController.swift in Sources */,
 				BB01A0A726A64D37007345C8 /* AppNavigator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -877,7 +885,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyTszyu.WatchApp.GitHubApp;
+				PRODUCT_BUNDLE_IDENTIFIER = SergeyTszyu.GitHubApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -897,7 +905,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = SergeyTszyu.WatchApp.GitHubApp;
+				PRODUCT_BUNDLE_IDENTIFIER = SergeyTszyu.GitHubApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
