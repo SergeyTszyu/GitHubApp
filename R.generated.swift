@@ -162,6 +162,85 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.image` struct is generated, and contains static references to 5 images.
+  struct image {
+    /// Image `icon_cell_badge_fork`.
+    static let icon_cell_badge_fork = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_cell_badge_fork")
+    /// Image `icon_cell_badge_issue`.
+    static let icon_cell_badge_issue = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_cell_badge_issue")
+    /// Image `icon_cell_badge_star`.
+    static let icon_cell_badge_star = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_cell_badge_star")
+    /// Image `icon_cell_disclosure`.
+    static let icon_cell_disclosure = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_cell_disclosure")
+    /// Image `icon_cell_updated`.
+    static let icon_cell_updated = Rswift.ImageResource(bundle: R.hostingBundle, name: "icon_cell_updated")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_cell_badge_fork", bundle: ..., traitCollection: ...)`
+    static func icon_cell_badge_fork(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_cell_badge_fork, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_cell_badge_issue", bundle: ..., traitCollection: ...)`
+    static func icon_cell_badge_issue(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_cell_badge_issue, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_cell_badge_star", bundle: ..., traitCollection: ...)`
+    static func icon_cell_badge_star(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_cell_badge_star, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_cell_disclosure", bundle: ..., traitCollection: ...)`
+    static func icon_cell_disclosure(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_cell_disclosure, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "icon_cell_updated", bundle: ..., traitCollection: ...)`
+    static func icon_cell_updated(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.icon_cell_updated, compatibleWith: traitCollection)
+    }
+    #endif
+
+    fileprivate init() {}
+  }
+
+  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  struct nib {
+    /// Nib `RepositoryListCell`.
+    static let repositoryListCell = _R.nib._RepositoryListCell()
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "RepositoryListCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.repositoryListCell) instead")
+    static func repositoryListCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.repositoryListCell)
+    }
+    #endif
+
+    static func repositoryListCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> RepositoryListCell? {
+      return R.nib.repositoryListCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? RepositoryListCell
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  struct reuseIdentifier {
+    /// Reuse identifier `RepositoryListCell`.
+    static let repositoryListCell: Rswift.ReuseIdentifier<RepositoryListCell> = Rswift.ReuseIdentifier(identifier: "RepositoryListCell")
+
+    fileprivate init() {}
+  }
+
   fileprivate struct intern: Rswift.Validatable {
     fileprivate static func validate() throws {
       try _R.validate()
@@ -178,9 +257,45 @@ struct R: Rswift.Validatable {
 struct _R: Rswift.Validatable {
   static func validate() throws {
     #if os(iOS) || os(tvOS)
+    try nib.validate()
+    #endif
+    #if os(iOS) || os(tvOS)
     try storyboard.validate()
     #endif
   }
+
+  #if os(iOS) || os(tvOS)
+  struct nib: Rswift.Validatable {
+    static func validate() throws {
+      try _RepositoryListCell.validate()
+    }
+
+    struct _RepositoryListCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
+      typealias ReusableType = RepositoryListCell
+
+      let bundle = R.hostingBundle
+      let identifier = "RepositoryListCell"
+      let name = "RepositoryListCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> RepositoryListCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? RepositoryListCell
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "icon_cell_badge_fork", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_cell_badge_fork' is used in nib 'RepositoryListCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_cell_badge_issue", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_cell_badge_issue' is used in nib 'RepositoryListCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_cell_badge_star", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_cell_badge_star' is used in nib 'RepositoryListCell', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "icon_cell_disclosure", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'icon_cell_disclosure' is used in nib 'RepositoryListCell', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+      }
+
+      fileprivate init() {}
+    }
+
+    fileprivate init() {}
+  }
+  #endif
 
   #if os(iOS) || os(tvOS)
   struct storyboard: Rswift.Validatable {

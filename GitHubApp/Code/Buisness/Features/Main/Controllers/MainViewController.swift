@@ -7,6 +7,27 @@
 
 import UIKit
 
+fileprivate enum FilterType {
+    case stars
+    case forks
+    case updated
+    
+    var title: String {
+        switch self {
+        case .stars:
+            return "Stars"
+        case .forks:
+            return "Forks"
+        case .updated:
+            return "Updated"
+        }
+    }
+    
+    static func filterData() -> [FilterType] {
+        return [.stars, .forks, .updated]
+    }
+}
+
 final class MainViewController: UIViewController {
     
     // MARK: - @IBOutlets
@@ -31,6 +52,7 @@ final class MainViewController: UIViewController {
 private extension MainViewController {
     
     func configure() {
+        tableView.register(R.nib.repositoryListCell)
         configureSearchController()
     }
     
@@ -39,7 +61,8 @@ private extension MainViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search"
         searchController.isActive = true
-        searchController.searchBar.scopeButtonTitles = ["Stars", "Forks", "Updated"]
+        
+        searchController.searchBar.scopeButtonTitles = FilterType.filterData().map { $0.title }
         
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
@@ -64,11 +87,13 @@ extension MainViewController: UITableViewDelegate {
 extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let listCell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.repositoryListCell, for: indexPath)!
+        
+        return listCell
     }
 }
 
