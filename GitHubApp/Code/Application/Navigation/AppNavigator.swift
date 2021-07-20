@@ -11,7 +11,11 @@ struct AppNavigator {
     
     static func setupRootViewController(for window: UIWindow?) {
         
-        window?.rootViewController = R.storyboard.authorization.instantiateInitialViewController()
+        if NetworkManager.shared.authorized {
+            window?.rootViewController = R.storyboard.main.instantiateInitialViewController()
+        } else {
+            window?.rootViewController = R.storyboard.authorization.instantiateInitialViewController()
+        }
         
         window?.makeKeyAndVisible()
     }
@@ -26,7 +30,8 @@ struct AppNavigator {
     
     static func setRootViewController(_ controller: UIViewController?, animated: Bool = true) {
         
-        if let window = UIApplication.shared.keyWindow, let controller = controller {
+        let keyWindow = UIApplication.shared.windows.first { $0.isKeyWindow }
+        if let window = keyWindow, let controller = controller {
             window.rootViewController = controller
         }
     }

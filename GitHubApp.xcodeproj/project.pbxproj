@@ -27,6 +27,16 @@
 		BB01A0C726A71C3A007345C8 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB01A0C626A71C3A007345C8 /* Authorization.storyboard */; };
 		BB01A0C926A71C53007345C8 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0C826A71C53007345C8 /* AuthorizationViewController.swift */; };
 		BB01A0CB26A7209E007345C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB01A0CA26A7209E007345C8 /* GoogleService-Info.plist */; };
+		BB01A0CD26A74239007345C8 /* RepositoryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0CC26A74239007345C8 /* RepositoryAPI.swift */; };
+		BB01A0CF26A742DD007345C8 /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0CE26A742DD007345C8 /* AuthPlugin.swift */; };
+		BB01A0D126A74309007345C8 /* ErrorHandlerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0D026A74309007345C8 /* ErrorHandlerPlugin.swift */; };
+		BB01A0D326A74383007345C8 /* APIProtocolable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0D226A74383007345C8 /* APIProtocolable.swift */; };
+		BB01A0D626A74E19007345C8 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0D526A74E19007345C8 /* Session.swift */; };
+		BB01A0D826A74E22007345C8 /* SessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0D726A74E22007345C8 /* SessionProvider.swift */; };
+		BB01A0DC26A74E83007345C8 /* SessionPlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0DB26A74E83007345C8 /* SessionPlainObject.swift */; };
+		BB01A0DF26A74EC3007345C8 /* NSCoder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0DE26A74EC3007345C8 /* NSCoder+Extensions.swift */; };
+		BB01A0E126A74FC7007345C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB01A0E026A74FC7007345C8 /* Main.storyboard */; };
+		BB01A0E326A74FD6007345C8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0E226A74FD6007345C8 /* MainViewController.swift */; };
 		DF34244A2E436E4F4C454109 /* Pods_GitHubApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E694812C2E2171794F816665 /* Pods_GitHubApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +85,16 @@
 		BB01A0C626A71C3A007345C8 /* Authorization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
 		BB01A0C826A71C53007345C8 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
 		BB01A0CA26A7209E007345C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BB01A0CC26A74239007345C8 /* RepositoryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryAPI.swift; sourceTree = "<group>"; };
+		BB01A0CE26A742DD007345C8 /* AuthPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
+		BB01A0D026A74309007345C8 /* ErrorHandlerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerPlugin.swift; sourceTree = "<group>"; };
+		BB01A0D226A74383007345C8 /* APIProtocolable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocolable.swift; sourceTree = "<group>"; };
+		BB01A0D526A74E19007345C8 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		BB01A0D726A74E22007345C8 /* SessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionProvider.swift; sourceTree = "<group>"; };
+		BB01A0DB26A74E83007345C8 /* SessionPlainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPlainObject.swift; sourceTree = "<group>"; };
+		BB01A0DE26A74EC3007345C8 /* NSCoder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSCoder+Extensions.swift"; sourceTree = "<group>"; };
+		BB01A0E026A74FC7007345C8 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		BB01A0E226A74FD6007345C8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BB06FEE8CB462CF03FD9F6DA /* Pods-GitHubAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubAppTests.debug.xcconfig"; path = "Target Support Files/Pods-GitHubAppTests/Pods-GitHubAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB543075A7F0547A8C6BFACD /* Pods-GitHubApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubApp.debug.xcconfig"; path = "Target Support Files/Pods-GitHubApp/Pods-GitHubApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E694812C2E2171794F816665 /* Pods_GitHubApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,6 +245,7 @@
 		BB01A09226A64BF2007345C8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				BB01A0D926A74E70007345C8 /* Models */,
 				BB01A09826A64C33007345C8 /* Managers */,
 				BB01A09726A64C2D007345C8 /* Helpers */,
 				BB01A09926A64C3B007345C8 /* Extensions */,
@@ -273,6 +294,7 @@
 		BB01A09826A64C33007345C8 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				BB01A0D426A74E0B007345C8 /* SessionProvider */,
 				BB01A0B526A64E85007345C8 /* NetworkManager */,
 			);
 			path = Managers;
@@ -281,8 +303,7 @@
 		BB01A09926A64C3B007345C8 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				BB01A0A326A64CD9007345C8 /* UIViewController */,
-				BB01A0A026A64CAE007345C8 /* UIImageView */,
+				BB01A0DD26A74EB4007345C8 /* Foundation */,
 				BB01A09C26A64C71007345C8 /* UIKit */,
 			);
 			path = Extensions;
@@ -311,6 +332,8 @@
 		BB01A09C26A64C71007345C8 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				BB01A0A326A64CD9007345C8 /* UIViewController */,
+				BB01A0A026A64CAE007345C8 /* UIImageView */,
 				BB01A09D26A64C7B007345C8 /* UIView */,
 			);
 			path = UIKit;
@@ -353,6 +376,8 @@
 		BB01A0A926A64DD3007345C8 /* APIs */ = {
 			isa = PBXGroup;
 			children = (
+				BB01A0D226A74383007345C8 /* APIProtocolable.swift */,
+				BB01A0CC26A74239007345C8 /* RepositoryAPI.swift */,
 			);
 			path = APIs;
 			sourceTree = "<group>";
@@ -360,6 +385,8 @@
 		BB01A0AA26A64DD8007345C8 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				BB01A0CE26A742DD007345C8 /* AuthPlugin.swift */,
+				BB01A0D026A74309007345C8 /* ErrorHandlerPlugin.swift */,
 			);
 			path = Plugins;
 			sourceTree = "<group>";
@@ -431,6 +458,7 @@
 		BB01A0BA26A715A5007345C8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BB01A0E226A74FD6007345C8 /* MainViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -438,8 +466,42 @@
 		BB01A0BC26A715B3007345C8 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				BB01A0E026A74FC7007345C8 /* Main.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		BB01A0D426A74E0B007345C8 /* SessionProvider */ = {
+			isa = PBXGroup;
+			children = (
+				BB01A0D526A74E19007345C8 /* Session.swift */,
+				BB01A0D726A74E22007345C8 /* SessionProvider.swift */,
+			);
+			path = SessionProvider;
+			sourceTree = "<group>";
+		};
+		BB01A0D926A74E70007345C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB01A0DA26A74E73007345C8 /* PlainObjects */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BB01A0DA26A74E73007345C8 /* PlainObjects */ = {
+			isa = PBXGroup;
+			children = (
+				BB01A0DB26A74E83007345C8 /* SessionPlainObject.swift */,
+			);
+			path = PlainObjects;
+			sourceTree = "<group>";
+		};
+		BB01A0DD26A74EB4007345C8 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				BB01A0DE26A74EC3007345C8 /* NSCoder+Extensions.swift */,
+			);
+			path = Foundation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -552,6 +614,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB01A0C726A71C3A007345C8 /* Authorization.storyboard in Resources */,
+				BB01A0E126A74FC7007345C8 /* Main.storyboard in Resources */,
 				BB01A0CB26A7209E007345C8 /* GoogleService-Info.plist in Resources */,
 				BB01A06A26A4E714007345C8 /* LaunchScreen.storyboard in Resources */,
 				BB01A06726A4E714007345C8 /* Assets.xcassets in Resources */,
@@ -704,14 +767,23 @@
 			files = (
 				BB01A0B726A64E93007345C8 /* NetworkManager.swift in Sources */,
 				BB01A0AC26A64DE9007345C8 /* NetworkLayer.swift in Sources */,
+				BB01A0DF26A74EC3007345C8 /* NSCoder+Extensions.swift in Sources */,
 				BB01A0A226A64CC0007345C8 /* UIImageView+ImageLoading.swift in Sources */,
+				BB01A0D126A74309007345C8 /* ErrorHandlerPlugin.swift in Sources */,
+				BB01A0E326A74FD6007345C8 /* MainViewController.swift in Sources */,
 				BB01A0A526A64CED007345C8 /* UIViewController+Extensions.swift in Sources */,
+				BB01A0DC26A74E83007345C8 /* SessionPlainObject.swift in Sources */,
+				BB01A0D626A74E19007345C8 /* Session.swift in Sources */,
 				BB01A09F26A64C8C007345C8 /* UIView+Inspectable.swift in Sources */,
 				BB01A0B426A64E35007345C8 /* BaseViewController.swift in Sources */,
 				BB01A0BF26A71639007345C8 /* R.generated.swift in Sources */,
+				BB01A0D326A74383007345C8 /* APIProtocolable.swift in Sources */,
 				BB01A05E26A4E70F007345C8 /* AppDelegate.swift in Sources */,
+				BB01A0CF26A742DD007345C8 /* AuthPlugin.swift in Sources */,
 				BB01A0C926A71C53007345C8 /* AuthorizationViewController.swift in Sources */,
 				BB01A0A726A64D37007345C8 /* AppNavigator.swift in Sources */,
+				BB01A0CD26A74239007345C8 /* RepositoryAPI.swift in Sources */,
+				BB01A0D826A74E22007345C8 /* SessionProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
