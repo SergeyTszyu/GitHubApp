@@ -26,20 +26,5 @@ class UserInfoControllerTests: XCTestCase {
         viewController = nil
         super.tearDown()
     }
-    
-    // MARK: Test Outlets
-    func testOutlets() {
-        XCTAssertNotNil(viewController.avatarImageView)
-    }
-    
-    // MARK: - Test UICollectionViewDataSource
-    func testIsConformToProtocolPageViewControllerDataSource() {
-        XCTAssertNotNil(viewController as UICollectionViewDataSource)
-    }
-    
-    // MARK: - Test UICollectionViewDelegate
-    func testIsConformToProtocolPageViewControllerDelegate() {
-        XCTAssertNotNil(viewController as UICollectionViewDelegate)
-    }
 
 }
