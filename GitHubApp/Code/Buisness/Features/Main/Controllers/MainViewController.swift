@@ -7,7 +7,7 @@
 
 import UIKit
 
-fileprivate enum FilterType {
+fileprivate enum FilterType: Int {
     case stars
     case forks
     case updated
@@ -49,7 +49,11 @@ final class MainViewController: UIViewController {
         }
     }
     fileprivate var selectedRepository: RepositoryModel!
-    fileprivate var filterType: FilterType = .stars
+    fileprivate var filterType: FilterType = .stars {
+        didSet {
+            filterData()
+        }
+    }
     
     // MARK: - Life cycle
     
@@ -57,17 +61,7 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         
         configure()
-        
-        ProgressHUD.show()
-        RepositoryNetworkManager.shared.repositoriesBy("circle") { result, error in
-            ProgressHUD.dismiss()
-            if let repositories = result {
-                self.repositories = repositories.sorted { $0.stars > $1.stars }
-                self.filteredRepositories = self.repositories
-            } else if let error = error {
-                Alert.presentAlertView(withType: .error, message: error.localizedDescription)
-            }
-        }
+        searchRepositoriesWith("cities")
     }
 }
 
@@ -88,9 +82,23 @@ private extension MainViewController {
         searchController.isActive = true
         
         searchController.searchBar.scopeButtonTitles = FilterType.filterData().map { $0.title }
+        searchController.searchBar.delegate = self
         
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
+    }
+    
+    func searchRepositoriesWith(_ name: String) {
+        ProgressHUD.show()
+        RepositoryNetworkManager.shared.repositoriesBy(name) { result, error in
+            ProgressHUD.dismiss()
+            if let repositories = result {
+                self.repositories = repositories.sorted { $0.stars > $1.stars }
+                self.filteredRepositories = self.repositories
+            } else if let error = error {
+                Alert.presentAlertView(withType: .error, message: error.localizedDescription)
+            }
+        }
     }
     
     func openRepositoryInfo() {
@@ -118,6 +126,20 @@ private extension MainViewController {
             } else if let error = error {
                 Alert.presentAlertView(withType: .error, message: error.localizedDescription)
             }
+        }
+    }
+    
+    func filterData() {
+        switch filterType {
+        case .stars:
+            self.repositories = repositories.sorted { $0.stars > $1.stars }
+            self.filteredRepositories = self.filteredRepositories.sorted { $0.stars > $1.stars }
+        case .forks:
+            self.repositories = repositories.sorted { $0.forks > $1.forks }
+            self.filteredRepositories = self.filteredRepositories.sorted { $0.forks > $1.forks }
+        case .updated:
+            self.repositories = repositories.sorted { $0.lastUpdate > $1.lastUpdate }
+            self.filteredRepositories = self.filteredRepositories.sorted { $0.lastUpdate > $1.lastUpdate }
         }
     }
 }
@@ -169,6 +191,18 @@ extension MainViewController: RepositoryListCellDelegate {
         let repositoryData = repositories[indexPath.row]
         self.selectedRepository = repositoryData
         openUserInfo()
+    }
+}
+
+// MARK: - UISearchBarDelegate
+
+extension MainViewController:  UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        guard let filterType = FilterType(rawValue: selectedScope) else {
+            return
+        }
+        self.filterType = filterType
     }
 }
 
