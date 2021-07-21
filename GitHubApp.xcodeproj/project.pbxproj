@@ -48,6 +48,8 @@
 		BB01A10126A788FF007345C8 /* RepositoryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A10026A788FF007345C8 /* RepositoryInfoViewController.swift */; };
 		BB01A10326A78A1C007345C8 /* RepositoryInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB01A10226A78A1C007345C8 /* RepositoryInfo.storyboard */; };
 		BB01A10826A78FB6007345C8 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A10726A78FB6007345C8 /* DateFormatter.swift */; };
+		BB9AC8A426A81020007E931F /* UserInfoControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9AC8A326A81020007E931F /* UserInfoControllerTests.swift */; };
+		BB9AC8A826A81156007E931F /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9AC8A726A81156007E931F /* MainViewControllerTests.swift */; };
 		BBD61C9426A792CA0005171F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBD61C9326A792CA0005171F /* GoogleService-Info.plist */; };
 		BBD61C9926A7A1040005171F /* UserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD61C9826A7A1040005171F /* UserInfo.storyboard */; };
 		BBD61C9B26A7A10D0005171F /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD61C9A26A7A10D0005171F /* UserInfoViewController.swift */; };
@@ -121,6 +123,8 @@
 		BB01A10226A78A1C007345C8 /* RepositoryInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RepositoryInfo.storyboard; sourceTree = "<group>"; };
 		BB01A10726A78FB6007345C8 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		BB06FEE8CB462CF03FD9F6DA /* Pods-GitHubAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubAppTests.debug.xcconfig"; path = "Target Support Files/Pods-GitHubAppTests/Pods-GitHubAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BB9AC8A326A81020007E931F /* UserInfoControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoControllerTests.swift; sourceTree = "<group>"; };
+		BB9AC8A726A81156007E931F /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
 		BBD61C9326A792CA0005171F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BBD61C9826A7A1040005171F /* UserInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserInfo.storyboard; sourceTree = "<group>"; };
 		BBD61C9A26A7A10D0005171F /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +219,7 @@
 		BB01A07326A4E714007345C8 /* GitHubAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				BB9AC89E26A80F2D007E931F /* Bussiness */,
 				BB01A07426A4E714007345C8 /* GitHubAppTests.swift */,
 				BB01A07626A4E714007345C8 /* Info.plist */,
 			);
@@ -625,6 +630,47 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		BB9AC89E26A80F2D007E931F /* Bussiness */ = {
+			isa = PBXGroup;
+			children = (
+				BB9AC8A526A81134007E931F /* Main */,
+				BB9AC8A126A80FAA007E931F /* UserInfo */,
+			);
+			path = Bussiness;
+			sourceTree = "<group>";
+		};
+		BB9AC8A126A80FAA007E931F /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				BB9AC8A226A80FAE007E931F /* Controller */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		BB9AC8A226A80FAE007E931F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BB9AC8A326A81020007E931F /* UserInfoControllerTests.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BB9AC8A526A81134007E931F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BB9AC8A626A81138007E931F /* Controller */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BB9AC8A626A81138007E931F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BB9AC8A726A81156007E931F /* MainViewControllerTests.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		BBD61C9526A7A0DE0005171F /* UserInfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -952,7 +998,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB01A07526A4E714007345C8 /* GitHubAppTests.swift in Sources */,
+				BB9AC8A426A81020007E931F /* UserInfoControllerTests.swift in Sources */,
 				BB01A0C026A71639007345C8 /* R.generated.swift in Sources */,
+				BB9AC8A826A81156007E931F /* MainViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
