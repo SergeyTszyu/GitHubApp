@@ -43,7 +43,13 @@ final class MainViewController: UIViewController {
             tableView.reloadData()
         }
     }
+    fileprivate var filteredRepositories = [RepositoryModel]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     fileprivate var selectedRepository: RepositoryModel!
+    fileprivate var filterType: FilterType = .stars
     
     // MARK: - Life cycle
     
@@ -56,7 +62,8 @@ final class MainViewController: UIViewController {
         RepositoryNetworkManager.shared.repositoriesBy("circle") { result, error in
             ProgressHUD.dismiss()
             if let repositories = result {
-                self.repositories = repositories
+                self.repositories = repositories.sorted { $0.stars > $1.stars }
+                self.filteredRepositories = self.repositories
             } else if let error = error {
                 Alert.presentAlertView(withType: .error, message: error.localizedDescription)
             }

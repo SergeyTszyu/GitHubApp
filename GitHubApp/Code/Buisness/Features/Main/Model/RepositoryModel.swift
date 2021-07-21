@@ -17,6 +17,7 @@ struct RepositoryModel: Mappable {
     var forks: Int!
     var watchers: Int!
     var issues: Int!
+    var stars: Int!
     var programmingLanguage: String!
     var repoDescription: String!
     var created: Date!
@@ -42,6 +43,7 @@ struct RepositoryModel: Mappable {
         created               <- (map["created_at"], dateTransform)
         lastUpdate            <- (map["updated_at"], dateTransform)
         urlString             <- map["html_url"]
+        stars                 <- map["stargazers_count"]
     }
     
 }
