@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol RepositoryListCellDelegate: class {
+    func repositoryListCellTapUser(_ cell: RepositoryListCell)
+}
+
 final class RepositoryListCell: UITableViewCell {
     
     // MARK: - @IBOutlets
@@ -19,6 +23,8 @@ final class RepositoryListCell: UITableViewCell {
     @IBOutlet private weak var issuesLabel: UILabel!
     
     // MARK: - Properties
+    
+    weak var delegate: RepositoryListCellDelegate?
     
     // MARK: - Life cycle
     
@@ -53,5 +59,14 @@ extension RepositoryListCell {
         forksLabel.text = "\(repositoryData.forks ?? 0)"
         watchersLabel.text = "\(repositoryData.watchers ?? 0)"
         issuesLabel.text = "\(repositoryData.issues ?? 0)"
+    }
+}
+
+// MARK: - Private
+
+private extension RepositoryListCell {
+    
+    @IBAction func tapUserImage(_ sender: UIButton) {
+        delegate?.repositoryListCellTapUser(self)
     }
 }

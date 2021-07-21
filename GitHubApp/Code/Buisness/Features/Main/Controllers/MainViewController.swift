@@ -86,14 +86,28 @@ private extension MainViewController {
         navigationItem.hidesSearchBarWhenScrolling = false
     }
     
-    func loadUserBy(_ userName: String) {
+    func openRepositoryInfo() {
         ProgressHUD.show()
-        RepositoryNetworkManager.shared.userBy(userName) { userModel, error in
+        RepositoryNetworkManager.shared.userBy(selectedRepository.owner.login) { userModel, error in
             ProgressHUD.dismiss()
             if let user = userModel {
                 let repositoryInfoController = R.storyboard.repositoryInfo.repositoryInfoViewController()!
                 repositoryInfoController.fill(user, repositoryModel: self.selectedRepository)
                 self.navigationController?.pushViewController(repositoryInfoController, animated: true)
+            } else if let error = error {
+                Alert.presentAlertView(withType: .error, message: error.localizedDescription)
+            }
+        }
+    }
+    
+    func openUserInfo() {
+        ProgressHUD.show()
+        RepositoryNetworkManager.shared.userBy(selectedRepository.owner.login) { userModel, error in
+            ProgressHUD.dismiss()
+            if let user = userModel {
+                let userInfoController = R.storyboard.userInfo.userInfoViewController()!
+                userInfoController.fill(user, repositoryModel: self.selectedRepository)
+                self.navigationController?.pushViewController(userInfoController, animated: true)
             } else if let error = error {
                 Alert.presentAlertView(withType: .error, message: error.localizedDescription)
             }
@@ -110,7 +124,7 @@ extension MainViewController: UITableViewDelegate {
         
         let repositoryData = repositories[indexPath.row]
         self.selectedRepository = repositoryData
-        loadUserBy(repositoryData.owner.login)
+        openRepositoryInfo()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -128,10 +142,26 @@ extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let listCell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.repositoryListCell, for: indexPath)!
+        
+        listCell.delegate = self
         let repositoryData = repositories[indexPath.row]
         listCell.fill(repositoryData)
         
         return listCell
+    }
+}
+
+// MARK: - RepositoryListCellDelegate
+
+extension MainViewController: RepositoryListCellDelegate {
+    
+    func repositoryListCellTapUser(_ cell: RepositoryListCell) {
+        guard let indexPath = tableView.indexPath(for: cell) else {
+            return
+        }
+        let repositoryData = repositories[indexPath.row]
+        self.selectedRepository = repositoryData
+        openUserInfo()
     }
 }
 

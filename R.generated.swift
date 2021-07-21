@@ -89,7 +89,7 @@ struct R: Rswift.Validatable {
   }
 
   #if os(iOS) || os(tvOS)
-  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 5 storyboards.
   struct storyboard {
     /// Storyboard `Authorization`.
     static let authorization = _R.storyboard.authorization()
@@ -99,6 +99,8 @@ struct R: Rswift.Validatable {
     static let main = _R.storyboard.main()
     /// Storyboard `RepositoryInfo`.
     static let repositoryInfo = _R.storyboard.repositoryInfo()
+    /// Storyboard `UserInfo`.
+    static let userInfo = _R.storyboard.userInfo()
 
     #if os(iOS) || os(tvOS)
     /// `UIStoryboard(name: "Authorization", bundle: ...)`
@@ -125,6 +127,13 @@ struct R: Rswift.Validatable {
     /// `UIStoryboard(name: "RepositoryInfo", bundle: ...)`
     static func repositoryInfo(_: Void = ()) -> UIKit.UIStoryboard {
       return UIKit.UIStoryboard(resource: R.storyboard.repositoryInfo)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIStoryboard(name: "UserInfo", bundle: ...)`
+    static func userInfo(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.userInfo)
     }
     #endif
 
@@ -330,6 +339,9 @@ struct _R: Rswift.Validatable {
       #if os(iOS) || os(tvOS)
       try repositoryInfo.validate()
       #endif
+      #if os(iOS) || os(tvOS)
+      try userInfo.validate()
+      #endif
     }
 
     #if os(iOS) || os(tvOS)
@@ -408,6 +420,28 @@ struct _R: Rswift.Validatable {
         if #available(iOS 11.0, tvOS 11.0, *) {
         }
         if _R.storyboard.repositoryInfo().repositoryInfoViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'repositoryInfoViewController' could not be loaded from storyboard 'RepositoryInfo' as 'RepositoryInfoViewController'.") }
+      }
+
+      fileprivate init() {}
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    struct userInfo: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = UserInfoViewController
+
+      let bundle = R.hostingBundle
+      let name = "UserInfo"
+      let userInfoViewController = StoryboardViewControllerResource<UserInfoViewController>(identifier: "UserInfoViewController")
+
+      func userInfoViewController(_: Void = ()) -> UserInfoViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: userInfoViewController)
+      }
+
+      static func validate() throws {
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+        if _R.storyboard.userInfo().userInfoViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'userInfoViewController' could not be loaded from storyboard 'UserInfo' as 'UserInfoViewController'.") }
       }
 
       fileprivate init() {}

@@ -15,6 +15,11 @@ struct RepositoryOwnerModel: Mappable {
     var avatarUrlString: String!
     var created: Date!
     var publicRepositories: Int!
+    var location: String!
+    var bio: String!
+    var following: Int!
+    var followers: Int!
+    var urlString: String!
     
     init?(map: Map) { }
     
@@ -28,6 +33,11 @@ struct RepositoryOwnerModel: Mappable {
         avatarUrlString       <- map["avatar_url"]
         created               <- (map["created_at"], dateTransform)
         publicRepositories    <- map["public_repos"]
+        location              <- map["location"]
+        bio                   <- map["bio"]
+        following             <- map["following"]
+        followers             <- map["followers"]
+        urlString             <- map["html_url"]
     }
     
 }

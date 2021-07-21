@@ -47,7 +47,6 @@
 		BB01A0FC26A778D9007345C8 /* RepositoryOwnerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0FB26A778D9007345C8 /* RepositoryOwnerModel.swift */; };
 		BB01A10126A788FF007345C8 /* RepositoryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A10026A788FF007345C8 /* RepositoryInfoViewController.swift */; };
 		BB01A10326A78A1C007345C8 /* RepositoryInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB01A10226A78A1C007345C8 /* RepositoryInfo.storyboard */; };
-		BB01A10626A78DE9007345C8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A10526A78DE9007345C8 /* UserModel.swift */; };
 		BB01A10826A78FB6007345C8 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A10726A78FB6007345C8 /* DateFormatter.swift */; };
 		BBD61C9426A792CA0005171F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBD61C9326A792CA0005171F /* GoogleService-Info.plist */; };
 		BBD61C9926A7A1040005171F /* UserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD61C9826A7A1040005171F /* UserInfo.storyboard */; };
@@ -120,7 +119,6 @@
 		BB01A0FB26A778D9007345C8 /* RepositoryOwnerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryOwnerModel.swift; sourceTree = "<group>"; };
 		BB01A10026A788FF007345C8 /* RepositoryInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInfoViewController.swift; sourceTree = "<group>"; };
 		BB01A10226A78A1C007345C8 /* RepositoryInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RepositoryInfo.storyboard; sourceTree = "<group>"; };
-		BB01A10526A78DE9007345C8 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		BB01A10726A78FB6007345C8 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		BB06FEE8CB462CF03FD9F6DA /* Pods-GitHubAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubAppTests.debug.xcconfig"; path = "Target Support Files/Pods-GitHubAppTests/Pods-GitHubAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BBD61C9326A792CA0005171F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -605,7 +603,6 @@
 		BB01A0FD26A788D6007345C8 /* RepositoryInfo */ = {
 			isa = PBXGroup;
 			children = (
-				BB01A10426A78DC7007345C8 /* Models */,
 				BB01A0FF26A788E8007345C8 /* Controller */,
 				BB01A0FE26A788E2007345C8 /* Storyboard */,
 			);
@@ -626,14 +623,6 @@
 				BB01A10026A788FF007345C8 /* RepositoryInfoViewController.swift */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		BB01A10426A78DC7007345C8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				BB01A10526A78DE9007345C8 /* UserModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		BBD61C9526A7A0DE0005171F /* UserInfo */ = {
@@ -928,7 +917,6 @@
 				BB01A0B726A64E93007345C8 /* NetworkManager.swift in Sources */,
 				BB01A0AC26A64DE9007345C8 /* NetworkLayer.swift in Sources */,
 				BB01A0DF26A74EC3007345C8 /* NSCoder+Extensions.swift in Sources */,
-				BB01A10626A78DE9007345C8 /* UserModel.swift in Sources */,
 				BB01A0F226A76679007345C8 /* RepositoryListCell.swift in Sources */,
 				BB01A0E926A75768007345C8 /* UIApplication+TopViewController.swift in Sources */,
 				BB01A0A226A64CC0007345C8 /* UIImageView+ImageLoading.swift in Sources */,
