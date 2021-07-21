@@ -262,7 +262,6 @@
 				BB01A09326A64BFE007345C8 /* App */,
 				BB01A09626A64C0D007345C8 /* Networking */,
 				BB01A09526A64C07007345C8 /* Navigation */,
-				BB01A09426A64C02007345C8 /* Device */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -282,7 +281,6 @@
 				BB01A0E426A75724007345C8 /* Alert */,
 				BB01A0D926A74E70007345C8 /* Models */,
 				BB01A09826A64C33007345C8 /* Managers */,
-				BB01A09726A64C2D007345C8 /* Helpers */,
 				BB01A09926A64C3B007345C8 /* Extensions */,
 			);
 			path = Common;
@@ -294,13 +292,6 @@
 				BB01A05D26A4E70F007345C8 /* AppDelegate.swift */,
 			);
 			path = App;
-			sourceTree = "<group>";
-		};
-		BB01A09426A64C02007345C8 /* Device */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Device;
 			sourceTree = "<group>";
 		};
 		BB01A09526A64C07007345C8 /* Navigation */ = {
@@ -317,13 +308,6 @@
 				BB01A0A826A64DCB007345C8 /* API */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		BB01A09726A64C2D007345C8 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		BB01A09826A64C33007345C8 /* Managers */ = {
@@ -361,7 +345,6 @@
 			children = (
 				BB01A0AF26A64E05007345C8 /* Controllers */,
 				BB01A0AE26A64DFF007345C8 /* Storyboard */,
-				BB01A0AD26A64DFB007345C8 /* Model */,
 			);
 			path = Authorization;
 			sourceTree = "<group>";
@@ -429,13 +412,6 @@
 			path = Plugins;
 			sourceTree = "<group>";
 		};
-		BB01A0AD26A64DFB007345C8 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		BB01A0AE26A64DFF007345C8 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
@@ -455,17 +431,10 @@
 		BB01A0B026A64E16007345C8 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				BB01A0B126A64E1E007345C8 /* Storyboard */,
+				BB9AC8A926A85917007E931F /* Storyboard */,
 				BB01A0B326A64E35007345C8 /* BaseViewController.swift */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		BB01A0B126A64E1E007345C8 /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		BB01A0B526A64E85007345C8 /* NetworkManager */ = {
@@ -669,6 +638,13 @@
 				BB9AC8A726A81156007E931F /* MainViewControllerTests.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BB9AC8A926A85917007E931F /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		BBD61C9526A7A0DE0005171F /* UserInfo */ = {
