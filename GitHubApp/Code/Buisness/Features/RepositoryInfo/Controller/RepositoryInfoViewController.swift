@@ -78,4 +78,10 @@ private extension RepositoryInfoViewController {
             UIApplication.shared.open(url)
         }
     }
+    
+    @IBAction func openUserInfo(_ sender: UIButton) {
+        let userInfoController = R.storyboard.userInfo.userInfoViewController()!
+        userInfoController.fill(userModel, repositoryModel: repositoryModel)
+        self.navigationController?.pushViewController(userInfoController, animated: true)
+    }
 }

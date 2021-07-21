@@ -30,6 +30,12 @@
                                                     <constraint firstAttribute="height" constant="80" id="tdB-Cq-PJ2"/>
                                                 </constraints>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I97-BW-1Yy">
+                                                <rect key="frame" x="16" y="24" width="80" height="80"/>
+                                                <connections>
+                                                    <action selector="openUserInfo:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7kn-qx-E8L"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3tW-hp-tJj">
                                                 <rect key="frame" x="112" y="24" width="286" height="24"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
@@ -83,11 +89,15 @@
                                             <constraint firstItem="8Hj-ln-pyq" firstAttribute="leading" secondItem="rql-NY-W6l" secondAttribute="trailing" constant="16" id="0Sb-K9-47w"/>
                                             <constraint firstAttribute="trailing" secondItem="3tW-hp-tJj" secondAttribute="trailing" constant="16" id="BTb-WH-DxS"/>
                                             <constraint firstItem="rgb-5b-fix" firstAttribute="top" secondItem="rql-NY-W6l" secondAttribute="bottom" constant="32" id="EaN-PX-gvn"/>
+                                            <constraint firstItem="I97-BW-1Yy" firstAttribute="width" secondItem="rql-NY-W6l" secondAttribute="width" id="FSj-6D-ELa"/>
+                                            <constraint firstItem="I97-BW-1Yy" firstAttribute="centerX" secondItem="rql-NY-W6l" secondAttribute="centerX" id="G3y-so-auZ"/>
+                                            <constraint firstItem="I97-BW-1Yy" firstAttribute="centerY" secondItem="rql-NY-W6l" secondAttribute="centerY" id="K1D-fM-Tmf"/>
                                             <constraint firstAttribute="trailing" secondItem="m4V-mz-4T7" secondAttribute="trailing" constant="16" id="Nhx-7c-tP8"/>
                                             <constraint firstItem="8Hj-ln-pyq" firstAttribute="centerY" secondItem="rql-NY-W6l" secondAttribute="centerY" id="PEL-b5-WAy"/>
                                             <constraint firstItem="3tW-hp-tJj" firstAttribute="leading" secondItem="rql-NY-W6l" secondAttribute="trailing" constant="16" id="TKZ-ML-Jca"/>
                                             <constraint firstAttribute="trailing" secondItem="rgb-5b-fix" secondAttribute="trailing" constant="16" id="djC-GY-PL5"/>
                                             <constraint firstItem="rql-NY-W6l" firstAttribute="top" secondItem="gyh-g2-XvW" secondAttribute="top" constant="24" id="dnS-M3-t51"/>
+                                            <constraint firstItem="I97-BW-1Yy" firstAttribute="height" secondItem="rql-NY-W6l" secondAttribute="height" id="flG-Qf-kuI"/>
                                             <constraint firstItem="m4V-mz-4T7" firstAttribute="bottom" secondItem="rql-NY-W6l" secondAttribute="bottom" id="j3p-Gu-sCK"/>
                                             <constraint firstItem="3tW-hp-tJj" firstAttribute="top" secondItem="rql-NY-W6l" secondAttribute="top" id="kna-Ls-gtc"/>
                                             <constraint firstItem="rgb-5b-fix" firstAttribute="leading" secondItem="gyh-g2-XvW" secondAttribute="leading" constant="16" id="maR-3L-XUO"/>
@@ -149,7 +159,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="29" y="96"/>
+            <point key="canvasLocation" x="28.985507246376812" y="95.758928571428569"/>
         </scene>
     </scenes>
     <resources>
