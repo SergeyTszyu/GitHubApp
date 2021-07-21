@@ -7,6 +7,10 @@
 
 import UIKit
 
+fileprivate struct Constans {
+    static let defaultSearchText = "circle"
+}
+
 fileprivate enum FilterType: Int {
     case stars
     case forks
@@ -37,23 +41,20 @@ final class MainViewController: UIViewController {
     // MARK: - Properties
     
     fileprivate let searchController = UISearchController(searchResultsController: nil)
-    
-    fileprivate var repositories = [RepositoryModel]() {
-        didSet {
-            tableView.reloadData()
-        }
-    }
-    fileprivate var filteredRepositories = [RepositoryModel]() {
-        didSet {
-            tableView.reloadData()
-        }
-    }
+    fileprivate var repositories = [RepositoryModel]()
+    fileprivate var filteredRepositories = [RepositoryModel]()
     fileprivate var selectedRepository: RepositoryModel!
     fileprivate var filterType: FilterType = .stars {
-        didSet {
-            filterData()
-        }
+        didSet { filterData() }
     }
+    fileprivate var searchBarIsEmpty: Bool {
+        guard let text = searchController.searchBar.text else { return false }
+        return text.isEmpty
+    }
+    fileprivate var isFiltering: Bool {
+        return searchController.isActive && !searchBarIsEmpty
+    }
+    fileprivate var timer: Timer?
     
     // MARK: - Life cycle
     
@@ -61,7 +62,6 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         
         configure()
-        searchRepositoriesWith("cities")
     }
 }
 
@@ -89,12 +89,11 @@ private extension MainViewController {
     }
     
     func searchRepositoriesWith(_ name: String) {
-        ProgressHUD.show()
         RepositoryNetworkManager.shared.repositoriesBy(name) { result, error in
-            ProgressHUD.dismiss()
             if let repositories = result {
-                self.repositories = repositories.sorted { $0.stars > $1.stars }
-                self.filteredRepositories = self.repositories
+                self.repositories = repositories
+                self.filterData()
+                self.tableView.reloadData()
             } else if let error = error {
                 Alert.presentAlertView(withType: .error, message: error.localizedDescription)
             }
@@ -211,9 +210,15 @@ extension MainViewController:  UISearchBarDelegate {
 extension MainViewController: UISearchResultsUpdating {
     
     func updateSearchResults(for searchController: UISearchController) {
-        guard let text = searchController.searchBar.text else {
+        guard let text = searchController.searchBar.text, !text.isEmpty else {
+            searchRepositoriesWith(Constans.defaultSearchText)
             return
         }
+        timer?.invalidate()
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 0.5 , repeats: false, block: { _ in
+            self.searchRepositoriesWith(text)
+        })
     }
 }
 
