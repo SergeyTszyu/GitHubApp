@@ -26,7 +26,6 @@
 		BB01A0C126A71639007345C8 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0BE26A71639007345C8 /* R.generated.swift */; };
 		BB01A0C726A71C3A007345C8 /* Authorization.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB01A0C626A71C3A007345C8 /* Authorization.storyboard */; };
 		BB01A0C926A71C53007345C8 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0C826A71C53007345C8 /* AuthorizationViewController.swift */; };
-		BB01A0CB26A7209E007345C8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB01A0CA26A7209E007345C8 /* GoogleService-Info.plist */; };
 		BB01A0CD26A74239007345C8 /* RepositoryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0CC26A74239007345C8 /* RepositoryAPI.swift */; };
 		BB01A0CF26A742DD007345C8 /* AuthPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0CE26A742DD007345C8 /* AuthPlugin.swift */; };
 		BB01A0D126A74309007345C8 /* ErrorHandlerPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0D026A74309007345C8 /* ErrorHandlerPlugin.swift */; };
@@ -46,6 +45,13 @@
 		BB01A0F826A77389007345C8 /* RepositoryNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0F726A77389007345C8 /* RepositoryNetworkManager.swift */; };
 		BB01A0FA26A77418007345C8 /* RepositoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0F926A77418007345C8 /* RepositoryModel.swift */; };
 		BB01A0FC26A778D9007345C8 /* RepositoryOwnerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A0FB26A778D9007345C8 /* RepositoryOwnerModel.swift */; };
+		BB01A10126A788FF007345C8 /* RepositoryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A10026A788FF007345C8 /* RepositoryInfoViewController.swift */; };
+		BB01A10326A78A1C007345C8 /* RepositoryInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB01A10226A78A1C007345C8 /* RepositoryInfo.storyboard */; };
+		BB01A10626A78DE9007345C8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A10526A78DE9007345C8 /* UserModel.swift */; };
+		BB01A10826A78FB6007345C8 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01A10726A78FB6007345C8 /* DateFormatter.swift */; };
+		BBD61C9426A792CA0005171F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBD61C9326A792CA0005171F /* GoogleService-Info.plist */; };
+		BBD61C9926A7A1040005171F /* UserInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBD61C9826A7A1040005171F /* UserInfo.storyboard */; };
+		BBD61C9B26A7A10D0005171F /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD61C9A26A7A10D0005171F /* UserInfoViewController.swift */; };
 		DF34244A2E436E4F4C454109 /* Pods_GitHubApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E694812C2E2171794F816665 /* Pods_GitHubApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,7 +99,6 @@
 		BB01A0BE26A71639007345C8 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		BB01A0C626A71C3A007345C8 /* Authorization.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Authorization.storyboard; sourceTree = "<group>"; };
 		BB01A0C826A71C53007345C8 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
-		BB01A0CA26A7209E007345C8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BB01A0CC26A74239007345C8 /* RepositoryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryAPI.swift; sourceTree = "<group>"; };
 		BB01A0CE26A742DD007345C8 /* AuthPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthPlugin.swift; sourceTree = "<group>"; };
 		BB01A0D026A74309007345C8 /* ErrorHandlerPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerPlugin.swift; sourceTree = "<group>"; };
@@ -113,7 +118,14 @@
 		BB01A0F726A77389007345C8 /* RepositoryNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryNetworkManager.swift; sourceTree = "<group>"; };
 		BB01A0F926A77418007345C8 /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
 		BB01A0FB26A778D9007345C8 /* RepositoryOwnerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryOwnerModel.swift; sourceTree = "<group>"; };
+		BB01A10026A788FF007345C8 /* RepositoryInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInfoViewController.swift; sourceTree = "<group>"; };
+		BB01A10226A78A1C007345C8 /* RepositoryInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RepositoryInfo.storyboard; sourceTree = "<group>"; };
+		BB01A10526A78DE9007345C8 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		BB01A10726A78FB6007345C8 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		BB06FEE8CB462CF03FD9F6DA /* Pods-GitHubAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubAppTests.debug.xcconfig"; path = "Target Support Files/Pods-GitHubAppTests/Pods-GitHubAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BBD61C9326A792CA0005171F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BBD61C9826A7A1040005171F /* UserInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserInfo.storyboard; sourceTree = "<group>"; };
+		BBD61C9A26A7A10D0005171F /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		CB543075A7F0547A8C6BFACD /* Pods-GitHubApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GitHubApp.debug.xcconfig"; path = "Target Support Files/Pods-GitHubApp/Pods-GitHubApp.debug.xcconfig"; sourceTree = "<group>"; };
 		E694812C2E2171794F816665 /* Pods_GitHubApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCF706BA84055D02BC3CC3F /* Pods_GitHubAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GitHubAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -233,7 +245,7 @@
 		BB01A08E26A64BC5007345C8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				BB01A0CA26A7209E007345C8 /* GoogleService-Info.plist */,
+				BBD61C9326A792CA0005171F /* GoogleService-Info.plist */,
 				BB01A06826A4E714007345C8 /* LaunchScreen.storyboard */,
 				BB01A06626A4E714007345C8 /* Assets.xcassets */,
 				BB01A0BE26A71639007345C8 /* R.generated.swift */,
@@ -332,6 +344,8 @@
 		BB01A09A26A64C4E007345C8 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				BBD61C9526A7A0DE0005171F /* UserInfo */,
+				BB01A0FD26A788D6007345C8 /* RepositoryInfo */,
 				BB01A0B826A71594007345C8 /* Main */,
 				BB01A0B026A64E16007345C8 /* Base */,
 				BB01A09B26A64C58007345C8 /* Authorization */,
@@ -525,6 +539,7 @@
 			isa = PBXGroup;
 			children = (
 				BB01A0DE26A74EC3007345C8 /* NSCoder+Extensions.swift */,
+				BB01A10726A78FB6007345C8 /* DateFormatter.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -585,6 +600,65 @@
 				BB01A0F526A76E5F007345C8 /* RoundedImageView.swift */,
 			);
 			path = RoundedImageView;
+			sourceTree = "<group>";
+		};
+		BB01A0FD26A788D6007345C8 /* RepositoryInfo */ = {
+			isa = PBXGroup;
+			children = (
+				BB01A10426A78DC7007345C8 /* Models */,
+				BB01A0FF26A788E8007345C8 /* Controller */,
+				BB01A0FE26A788E2007345C8 /* Storyboard */,
+			);
+			path = RepositoryInfo;
+			sourceTree = "<group>";
+		};
+		BB01A0FE26A788E2007345C8 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BB01A10226A78A1C007345C8 /* RepositoryInfo.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		BB01A0FF26A788E8007345C8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BB01A10026A788FF007345C8 /* RepositoryInfoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BB01A10426A78DC7007345C8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BB01A10526A78DE9007345C8 /* UserModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BBD61C9526A7A0DE0005171F /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				BBD61C9726A7A0F50005171F /* Controllers */,
+				BBD61C9626A7A0EC0005171F /* Storyboard */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
+		BBD61C9626A7A0EC0005171F /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				BBD61C9826A7A1040005171F /* UserInfo.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		BBD61C9726A7A0F50005171F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BBD61C9A26A7A10D0005171F /* UserInfoViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -698,10 +772,12 @@
 			files = (
 				BB01A0C726A71C3A007345C8 /* Authorization.storyboard in Resources */,
 				BB01A0E126A74FC7007345C8 /* Main.storyboard in Resources */,
-				BB01A0CB26A7209E007345C8 /* GoogleService-Info.plist in Resources */,
 				BB01A0F326A76679007345C8 /* RepositoryListCell.xib in Resources */,
+				BB01A10326A78A1C007345C8 /* RepositoryInfo.storyboard in Resources */,
 				BB01A06A26A4E714007345C8 /* LaunchScreen.storyboard in Resources */,
+				BBD61C9926A7A1040005171F /* UserInfo.storyboard in Resources */,
 				BB01A06726A4E714007345C8 /* Assets.xcassets in Resources */,
+				BBD61C9426A792CA0005171F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -852,6 +928,7 @@
 				BB01A0B726A64E93007345C8 /* NetworkManager.swift in Sources */,
 				BB01A0AC26A64DE9007345C8 /* NetworkLayer.swift in Sources */,
 				BB01A0DF26A74EC3007345C8 /* NSCoder+Extensions.swift in Sources */,
+				BB01A10626A78DE9007345C8 /* UserModel.swift in Sources */,
 				BB01A0F226A76679007345C8 /* RepositoryListCell.swift in Sources */,
 				BB01A0E926A75768007345C8 /* UIApplication+TopViewController.swift in Sources */,
 				BB01A0A226A64CC0007345C8 /* UIImageView+ImageLoading.swift in Sources */,
@@ -862,15 +939,18 @@
 				BB01A0F826A77389007345C8 /* RepositoryNetworkManager.swift in Sources */,
 				BB01A0A526A64CED007345C8 /* UIViewController+Extensions.swift in Sources */,
 				BB01A0DC26A74E83007345C8 /* SessionPlainObject.swift in Sources */,
+				BBD61C9B26A7A10D0005171F /* UserInfoViewController.swift in Sources */,
 				BB01A0D626A74E19007345C8 /* Session.swift in Sources */,
 				BB01A09F26A64C8C007345C8 /* UIView+Inspectable.swift in Sources */,
 				BB01A0B426A64E35007345C8 /* BaseViewController.swift in Sources */,
+				BB01A10126A788FF007345C8 /* RepositoryInfoViewController.swift in Sources */,
 				BB01A0BF26A71639007345C8 /* R.generated.swift in Sources */,
 				BB01A0D326A74383007345C8 /* APIProtocolable.swift in Sources */,
 				BB01A05E26A4E70F007345C8 /* AppDelegate.swift in Sources */,
 				BB01A0CF26A742DD007345C8 /* AuthPlugin.swift in Sources */,
 				BB01A0ED26A76568007345C8 /* ProgressHUD.swift in Sources */,
 				BB01A0C926A71C53007345C8 /* AuthorizationViewController.swift in Sources */,
+				BB01A10826A78FB6007345C8 /* DateFormatter.swift in Sources */,
 				BB01A0A726A64D37007345C8 /* AppNavigator.swift in Sources */,
 				BB01A0CD26A74239007345C8 /* RepositoryAPI.swift in Sources */,
 				BB01A0FA26A77418007345C8 /* RepositoryModel.swift in Sources */,

@@ -30,4 +30,21 @@ final class RepositoryNetworkManager {
         }
     }
     
+    func userBy(_ userName: String, _ completion: Completion<RepositoryOwnerModel>?) {
+        let target = RepositoryAPI.userBy(userName)
+        authorizedRequest(target: target) { result in
+            switch result {
+            case .success(let response):
+                do {
+                    let user = try response.mapObject(RepositoryOwnerModel.self)
+                    completion?(user, nil)
+                } catch let error {
+                    completion?(nil, error)
+                }
+            case .failure(let error):
+                completion?(nil, error)
+            }
+        }
+    }
+    
 }

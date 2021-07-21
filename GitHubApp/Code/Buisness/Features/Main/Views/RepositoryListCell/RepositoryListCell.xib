@@ -12,14 +12,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RepositoryListCell" id="KGk-i7-Jjw" customClass="RepositoryListCell" customModule="GitHubApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2G-cy-Wa7">
-                        <rect key="frame" x="8" y="8" width="304" height="56"/>
+                        <rect key="frame" x="8" y="0.0" width="304" height="56"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yve-re-8u0" customClass="RoundedImageView" customModule="GitHubApp" customModuleProvider="target">
                                 <rect key="frame" x="16" y="8" width="40" height="40"/>
@@ -40,7 +40,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Nj-fe-uin">
                                         <rect key="frame" x="0.0" y="18.5" width="205" height="19"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vJF-nD-cj6">
@@ -160,7 +160,7 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="P2G-cy-Wa7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="0gN-Cd-1S4"/>
+                    <constraint firstItem="P2G-cy-Wa7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0gN-Cd-1S4"/>
                     <constraint firstItem="P2G-cy-Wa7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Jr1-hD-ob9"/>
                     <constraint firstAttribute="trailing" secondItem="P2G-cy-Wa7" secondAttribute="trailing" constant="8" id="PAC-hA-bmV"/>
                     <constraint firstAttribute="bottom" secondItem="P2G-cy-Wa7" secondAttribute="bottom" constant="8" id="RX1-eg-G71"/>

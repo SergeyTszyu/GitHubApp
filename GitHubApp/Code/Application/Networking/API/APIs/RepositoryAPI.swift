@@ -11,6 +11,7 @@ import Alamofire
 enum RepositoryAPI: APIProtocolable {
     
     case repositoriesBy(_ name: String)
+    case userBy(_ userName: String)
 }
 
 extension RepositoryAPI: TargetType {
@@ -23,6 +24,8 @@ extension RepositoryAPI: TargetType {
         switch self {
         case .repositoriesBy(_):
             return "/search/repositories"
+        case .userBy(let userName):
+            return "/users/\(userName)"
         }
     }
     
@@ -43,6 +46,8 @@ extension RepositoryAPI: TargetType {
         case .repositoriesBy(let name):
             return .requestParameters(parameters: ["q": name],
                                       encoding: URLEncoding.default)
+        case .userBy(_):
+            return .requestPlain
         }
     }
     

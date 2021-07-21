@@ -48,7 +48,7 @@ extension RepositoryListCell {
             avatarImageView.setImageWithURL(avatarURL)
         }
         
-        repositoryNameLabel.text = repositoryData.fullName
+        repositoryNameLabel.text = repositoryData.name
         ownerNameLabel.text = repositoryData.owner.login
         forksLabel.text = "\(repositoryData.forks ?? 0)"
         watchersLabel.text = "\(repositoryData.watchers ?? 0)"
